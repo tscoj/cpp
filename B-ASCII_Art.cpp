@@ -15,6 +15,7 @@ int main(){
 			else {c=a[i][j]+64; cout<<c;}
 		}
 		cout<<"\n";
+		return 0;
 	}
 		
 }
