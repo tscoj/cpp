@@ -5,6 +5,9 @@ int main () {
     cin >> s;
 
     cout << s;
-    sort(s.begin(), s.end());
-    cout << s;
+    for(int i = s.size(); i > 0; i--){
+        cout << s[i];
+    } 
+
+    return 0;
 }
