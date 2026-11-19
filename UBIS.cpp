@@ -14,6 +14,6 @@ int main(){
     }
 }	cout<<c<<endl;
 for(int j=1;j<=c;j++){
-	cout<<a[j] << " ";
+	cout <<a[j] << " ";
 
 }}

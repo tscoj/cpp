@@ -1,5 +1,7 @@
-#include<bits/stdc++.h>
+#include<iostream>
 using namespace std;
-void pzda () {
-	cout<<pzda;
+int main () {
+	int n;
+	cin >> n;
+	cout << n + 1;
 }
