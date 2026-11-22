@@ -1,21 +1,32 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-int main () {
-    int a[1000000], n;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
     cin >> n;
-    for(int i = 1; i <= n; i++){
-        cin >> a[i];
+
+    vector<int> a(n + 1, 0), h(n + 1);
+    for (int i = 1; i <= n; i++) {
+        cin >> h[i];
     }
 
-    int ans;
-    for(int i = 1; i <= n; i++){
-        ans = 0;
-        for(int j = 1; j < i; j++){
-            if(a[j] >= a[i])
-            ans = j;
+    h[0] = 0;
+    for (int i = 1; i <= n; i++) {
+        int j = i - 1;
+        while (j > 0 && h[j] < h[i]) {
+            j = a[j];
         }
-        cout << ans << " ";
+        a[i] = j;
     }
+
+    for (int i = 1; i <= n; i++) {
+        if (i > 1) cout << " ";
+        cout << a[i];
+    }
+    cout << "\n";
 
     return 0;
 }
